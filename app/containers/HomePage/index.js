@@ -23,7 +23,6 @@ import {
 import { changeUsername } from './actions';
 import { loadRepos } from '../App/actions';
 
-import RepoListItem from 'containers/RepoListItem';
 import Button from 'components/Button';
 import H2 from 'components/H2';
 import List from 'components/List';
@@ -73,7 +72,7 @@ export class HomePage extends React.Component {
 
     // If we're not loading, don't have an error and there are repos, show the repos
     } else if (this.props.repos !== false) {
-      mainContent = (<List items={this.props.repos} component={RepoListItem} />);
+      mainContent = (<List items={this.props.repos} component={ListItem} />);
     }
 
     return (
